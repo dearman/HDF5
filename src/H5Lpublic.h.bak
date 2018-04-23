@@ -139,7 +139,6 @@ typedef herr_t (*H5L_elink_traverse_t)(const char *parent_file_name,
 /* Public Variables */
 /********************/
 
-#ifndef HDF5_DOT_NET
 
 /*********************/
 /* Public Prototypes */
@@ -193,8 +192,6 @@ H5_DLL herr_t H5Lunpack_elink_val(const void *ext_linkval/*in*/, size_t link_siz
    unsigned *flags, const char **filename/*out*/, const char **obj_path /*out*/);
 H5_DLL herr_t H5Lcreate_external(const char *file_name, const char *obj_name,
     hid_t link_loc_id, const char *link_name, hid_t lcpl_id, hid_t lapl_id);
-
-#endif /* HDF5_DOT_NET */
 
 #ifdef __cplusplus
 }

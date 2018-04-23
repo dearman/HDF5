@@ -322,8 +322,6 @@ typedef struct H5_ih_info_t {
     hsize_t     heap_size;
 } H5_ih_info_t;
 
-#ifndef HDF5_DOT_NET
-
 /* Functions in H5.c */
 H5_DLL herr_t H5open(void);
 H5_DLL herr_t H5close(void);
@@ -340,9 +338,6 @@ H5_DLL herr_t H5is_library_threadsafe(hbool_t *is_ts);
 H5_DLL herr_t H5free_memory(void *mem);
 H5_DLL void *H5allocate_memory(size_t size, hbool_t clear);
 H5_DLL void *H5resize_memory(void *mem, size_t size);
-
-
-#endif /* HDF5_DOT_NET */
 
 #ifdef __cplusplus
 }

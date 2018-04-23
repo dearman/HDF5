@@ -89,8 +89,6 @@ typedef enum {
 extern "C" {
 #endif
 
-#ifndef HDF5_DOT_NET
-
 /* Functions in H5S.c */
 H5_DLL hid_t H5Screate(H5S_class_t type);
 H5_DLL hid_t H5Screate_simple(int rank, const hsize_t dims[],
@@ -144,8 +142,6 @@ H5_DLL herr_t H5Sget_select_elem_pointlist(hid_t spaceid, hsize_t startpoint,
 H5_DLL herr_t H5Sget_select_bounds(hid_t spaceid, hsize_t start[],
     hsize_t end[]);
 H5_DLL H5S_sel_type H5Sget_select_type(hid_t spaceid);
-
-#endif /* HDF5_DOT_NET */
 
 #ifdef __cplusplus
 }

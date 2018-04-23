@@ -19,25 +19,16 @@
 
 /* Public header files needed by this file */
 #include "H5public.h"
-#ifndef HDF5_DOT_NET
 #include "H5ACpublic.h"
-#endif
 #include "H5Ipublic.h"
 
 /* When this header is included from a private header, don't make calls to H5check() */
 #undef H5CHECK
-#ifdef HDF5_DOT_NET
-#define _H5private_H
-#endif
 #ifndef _H5private_H
 #define H5CHECK          H5check(),
 #else   /* _H5private_H */
 #define H5CHECK
 #endif  /* _H5private_H */
-
-#ifdef HDF5_DOT_NET
-#undef _H5private_H
-#endif
 
 /*
  * These are the bits that can be passed to the `flags' argument of
@@ -159,8 +150,6 @@ typedef enum H5F_libver_t {
 extern "C" {
 #endif
 
-#ifndef HDF5_DOT_NET
-
 /* Functions in H5F.c */
 H5_DLL htri_t H5Fis_hdf5(const char *filename);
 H5_DLL hid_t  H5Fcreate(const char *filename, unsigned flags,
@@ -199,8 +188,6 @@ H5_DLL herr_t H5Fclear_elink_file_cache(hid_t file_id);
 H5_DLL herr_t H5Fset_mpi_atomicity(hid_t file_id, hbool_t flag);
 H5_DLL herr_t H5Fget_mpi_atomicity(hid_t file_id, hbool_t *flag);
 #endif /* H5_HAVE_PARALLEL */
-
-#endif /* HDF5_DOT_NET */
 
 #ifdef __cplusplus
 }

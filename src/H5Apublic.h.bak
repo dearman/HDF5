@@ -38,8 +38,6 @@ typedef struct {
 typedef herr_t (*H5A_operator2_t)(hid_t location_id/*in*/,
     const char *attr_name/*in*/, const H5A_info_t *ainfo/*in*/, void *op_data/*in,out*/);
 
-#ifndef HDF5_DOT_NET
-
 /* Public function prototypes */
 H5_DLL hid_t   H5Acreate2(hid_t loc_id, const char *attr_name, hid_t type_id,
     hid_t space_id, hid_t acpl_id, hid_t aapl_id);
@@ -111,8 +109,6 @@ H5_DLL herr_t  H5Aiterate1(hid_t loc_id, unsigned *attr_num, H5A_operator1_t op,
     void *op_data);
 
 #endif /* H5_NO_DEPRECATED_SYMBOLS */
-
-#endif /* HDF5_DOT_NET */
 
 #ifdef __cplusplus
 }

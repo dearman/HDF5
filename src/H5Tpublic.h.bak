@@ -495,8 +495,6 @@ H5_DLLVAR hid_t H5T_NATIVE_UINT_LEAST64_g;
 H5_DLLVAR hid_t H5T_NATIVE_INT_FAST64_g;
 H5_DLLVAR hid_t H5T_NATIVE_UINT_FAST64_g;
 
-#ifndef HDF5_DOT_NET
-
 /* Operations defined on all datatypes */
 H5_DLL hid_t H5Tcreate(H5T_class_t type, size_t size);
 H5_DLL hid_t H5Tcopy(hid_t type_id);
@@ -613,8 +611,6 @@ H5_DLL hid_t H5Tarray_create1(hid_t base_id, int ndims,
 H5_DLL int H5Tget_array_dims1(hid_t type_id, hsize_t dims[], int perm[]);
 
 #endif /* H5_NO_DEPRECATED_SYMBOLS */
-
-#endif /* HDF5_DOT_NET */
 
 #ifdef __cplusplus
 }
